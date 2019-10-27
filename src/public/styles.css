@@ -1,0 +1,48 @@
+/*
+
+purpura base: #1c102b
+cyan : #00FFFF
+rasperry : #FF007D
+gris obscuro : #636363
+
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Be+Vietnam|Nova+Mono&display=swap');
+ body{
+    margin: 0;
+
+}
+a{
+
+    font-family: 'Fahkwang', sans-serif;
+    text-decoration: none;
+    color: #ff39cb;
+    margin-left: 15px ;
+    font-weight: bold;
+
+}
+
+a:hover{
+    background-color: #00FFFF;
+    color: indigo;
+}
+h1, h2, h3{
+    margin-top: 0;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: 'Fahkwang', sans-serif;
+    color: #FF90EE;
+
+}
+p{
+    margin-top: 0;
+    padding-top: 15px;
+    padding-left: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+navbar{
+    position: fixed;
+    top:15px;
+    right: 20px;
+    font-size: 18px;
+}
