@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <% include partials/header %>
 </head>
+
 <body>
     <% include partials/navigation %>
 
     <div class="container">
         <div class="row p-4">
             <% records.forEach(function(record) {%>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <% if(record.monotony === 'true'){%>
-                                <h2><i class="far fa-grin-stars"></i></h2>
-                            <% }else{ %>
-                                <h2><i class="far fa-meh-rolling-eyes"></i></h2> 
-                            <%}%>
+            <div class="col-3 p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <% if(record.monotony === 'false'){%>
+                        <h2><i class="far fa-grin-stars"></i></h2>
+                        <% }else{ %>
+                        <h2><i class="far fa-meh-rolling-eyes"></i></h2>
+                        <%}%>
 
                             <p><%= record.quote %></p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="/delete<% record.id %>" class="btn btn-danger">Delete</a>
-                            <a href="/edit<% record.id %>" class="btn btn-info">Edit</a>
-                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/delete/<%= record.id %>" class="btn btn-danger">Delete</a>
+                        <a href="/edit/<%= record.id %>" class="btn btn-info">Edit</a>
                     </div>
                 </div>
-                
+            </div>
+
             <% })%>
         </div>
     </div>
@@ -34,17 +36,16 @@
 
     <button class="btn btn-dark" id="btnT">Toast</button>
     <a href="./new-record"><button class="btn btn-dark" id="record">New Record</button></a>
-    
 
-    
+
+
     <% include partials/toast %>
 
     <% include partials/footer %>
 
     <script>
-
         $("#btnT").click(message('Holis, este es un mensaje mamón que no sale cuando le toca ', 'fas fa-ghost'));
-
     </script>
 </body>
+
 </html>
