@@ -1,27 +1,43 @@
  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <% include partials/header %>
-    <title>Document</title>
-</head>
-<body class="container">
-        <div class="card p-4">
-            
-                <form action="/new-record " method="POST" card card-body">
-                        <h4>Día y fecha</h4>
-                        <div class="form-group">
-                            <label for="monotony">Do you have more than 20min of monotony?</label>
-                            <input type="checkbox" name="monotony" id="monotony" class="form-control" >
-                        </div>
-                        <div class="form-group">
-                            <label for="quote">Write a good thing here</label>
-                            <input type="text" name="quote" id="quote" class="form-control" required >
-                        </div> 
-                        <input type="submit" value="Record" class="btn btn-info">
-                    </form>
-        </div>    
-</body>
-</html>
+ <html lang="en">
 
+ <head>
+     <% include partials/header %>
+     <title>Polimnia - New record</title>
+ </head>
 
+ <body>
+     <% include partials/navigation %>
 
+     <div class="container p-4">
+         <div class="card ">
+             <div class="card-body">
+                 <h2 class="card-title">Día y fecha</h2>
+                 <form action="/new-record " method="POST" class=" card-body">
+
+                     <div class="form-group">
+                         <label for="monotony">Do you have more than 20min of monotony?</label>
+                         <input type="radio" name="monotony" id="monotony" class="form-control" value="true"> Yep
+                         <input type="radio" name="monotony" id="monotony" class="form-control" value="false"> Nop, I
+                         feel better
+                     </div>
+                     <div class="form-group">
+                         <label for="quote">Write a good thing here</label>
+                         <input type="text" name="quote" id="quote" class="form-control" required>
+                     </div>
+                     <input type="submit" value="Record" class="btn btn-info">
+                 </form>
+             </div>
+
+         </div>
+
+     </div>
+
+     <style>
+         card {
+             padding: 5 px;
+         }
+     </style>
+ </body>
+
+ </html>

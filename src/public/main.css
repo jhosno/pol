@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam|Nova+Slim&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap');
+
+body {
+    display:block;
+
+    margin: 0;
+    background: #9D50BB;  /* fallback for old browsers */
+   
+
+}
+
 /*
 
 purpura base: #1c102b
@@ -5,7 +17,7 @@ cyan : #00FFFF
 rasperry : #FF007D
 gris obscuro : #636363
 
- */
+
 
  @import url('https://fonts.googleapis.com/css?family=Be+Vietnam|Nova+Mono&display=swap');
  body{
@@ -46,3 +58,4 @@ navbar{
     right: 20px;
     font-size: 18px;
 }
+ */
