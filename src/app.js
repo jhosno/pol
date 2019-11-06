@@ -13,13 +13,13 @@ const morgan = require('morgan');
 
 //Settings (configuraciones de servidor)
 
-app.set('port', 4000);
+app.set('port', 5000);
 
 //Aquí establecemos expliciamente la dirección estática de las vistas
 //Para eso concatenamos el modulo path (de node) con _dirname
 //con eso hacemos que la dirección sea multiplataforma 
 app.set('views', path.join(__dirname, 'views'));
- 
+
 
 //Se agraga la ingenieria de vistas EJS, como Express ya lo tiene integrado solo se instancia con la siguiente línea de comando 
 app.set('view engine', 'ejs')
@@ -33,13 +33,7 @@ app.use(express.urlencoded({extended:false}));
 //Routers
 app.use(require('./routes/index'))
 
-
 //Static (archivos estáticos -> carpeta public)
-app.use(express.static(path.join(__dirname,'public')));
-
-//404 handle 
-app.use((req,res, next) => {
-    res.status(404).render('./404.ejs');
-})
+app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app; 
